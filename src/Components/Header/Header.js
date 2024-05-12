@@ -1,23 +1,23 @@
 import React, { useContext } from "react";
 import { Nav, Navbar, Container, Button, Row, Col } from "react-bootstrap";
 import cartContext from "../../Context/cart-context";
-// import Container from 'react-bootstrap';
+import { NavLink } from "react-router-dom";
 
 const Header = (props) => {
-  const cartCtx=useContext(cartContext);
+  const cartCtx = useContext(cartContext);
   const { show } = props;
-  const totalItems=cartCtx.items.reduce((curr,item)=>{
-    console.log(item)
-    return curr+item.quantity;
-  },0);
+  const totalItems = cartCtx.items.reduce((curr, item) => {
+    console.log(item);
+    return curr + item.quantity;
+  }, 0);
   return (
     <header>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Nav className="m-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <NavLink to="/" className="nav-link ml-2">HOME </NavLink>
+            <NavLink to="/store" className="nav-link ml-2">STORE </NavLink>
+            <NavLink to="/about" className="nav-link ml-2">ABOUT</NavLink>
           </Nav>
           <Button onClick={show} variant="outline-primary">
             Cart {totalItems}
