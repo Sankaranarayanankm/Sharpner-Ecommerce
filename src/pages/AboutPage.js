@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
-import { Col, Row, Image, Container, Card } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 
 const AboutPage = () => {
   return (

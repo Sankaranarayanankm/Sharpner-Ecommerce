@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import CartProvider from '../Context/CartProvider';
-import Header from '../Components/Header/Header';
-import ItemList from '../Components/LayOut/ItemList';
-import CartOffCanvas from '../Components/Cart/CartOffCanvas';
-import Footer from '../Components/Footer/Footer';
+import React, { useState } from "react";
+import CartProvider from "../Context/CartProvider";
+import Header from "../Components/Header/Header";
+import ItemList from "../Components/LayOut/ItemList";
+import CartOffCanvas from "../Components/Cart/CartOffCanvas";
+import Footer from "../Components/Footer/Footer";
 
 const CartPage = () => {
   const [show, setShow] = useState(false);
@@ -25,6 +25,6 @@ const CartPage = () => {
       <Footer />
     </CartProvider>
   );
-}
+};
 
 export default CartPage;

@@ -44,7 +44,7 @@ const CartOffCanvas = (props) => {
           </div>
           <Table>
             <thead>
-              <tr >
+              <tr>
                 <th>ITEM</th>
                 <th>PRICE</th>
                 <th>QUANTITY</th>
@@ -53,7 +53,7 @@ const CartOffCanvas = (props) => {
 
             <tbody>
               {cartElements.map((item) => (
-                <tr >
+                <tr>
                   <td>
                     <div>
                       <img style={{ width: "50px" }} src={item.imageUrl} />{" "}
