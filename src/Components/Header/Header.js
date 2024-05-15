@@ -5,10 +5,8 @@ import { NavLink } from "react-router-dom";
 
 const Header = (props) => {
   const cartCtx = useContext(cartContext);
-  console.log(props);
   const { show } = props;
   const totalItems = cartCtx.items.reduce((curr, item) => {
-    console.log(item);
     return curr + item.quantity;
   }, 0);
   return (
@@ -24,6 +22,9 @@ const Header = (props) => {
             </NavLink>
             <NavLink to="/about" className="nav-link ml-2">
               ABOUT
+            </NavLink>
+            <NavLink to="/contact" className="nav-link ml-2">
+              CONTACT US
             </NavLink>
           </Nav>
           <Button onClick={show} variant="outline-primary">
