@@ -6,10 +6,10 @@ const initalReducer = {
   cartItems: [],
 };
 const reducer = (state, action) => {
-  if (action.type == "ADD") {
+  if (action.type === "ADD") {
     console.log(action.item);
     let existingCartItemIndex = state.items.findIndex(
-      (item) => item.id == action.item.id
+      (item) => item.id === action.item.id
     );
     let existingCartItem = state.items[existingCartItemIndex];
     let updatedItems;

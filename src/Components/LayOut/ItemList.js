@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Item from "./Item";
 const productsArr = [
   {

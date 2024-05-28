@@ -56,7 +56,7 @@ const CartOffCanvas = (props) => {
                 <tr>
                   <td>
                     <div>
-                      <img style={{ width: "50px" }} src={item.imageUrl} />{" "}
+                      <img style={{ width: "50px" }} alt={item.title} src={item.imageUrl} />{" "}
                       {item.title}
                     </div>
                   </td>
