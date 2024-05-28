@@ -37,6 +37,7 @@ const CartProvider = (props) => {
   const removeItemFromCartHandler = (id) => {
     dispatch({ type: "REMOVE", id: id });
   };
+  console.log(state.cartItems)
 
   const defaultContext = {
     items: state.items,

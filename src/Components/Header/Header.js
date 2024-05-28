@@ -7,7 +7,6 @@ import { authContext } from "../../Context/AuthContextProvider";
 const Header = (props) => {
   const cartCtx = useContext(cartContext);
   const authCtx = useContext(authContext);
-  console.log(authCtx);
   const { show } = props;
   const totalItems = cartCtx.items.reduce((curr, item) => {
     return curr + item.quantity;
