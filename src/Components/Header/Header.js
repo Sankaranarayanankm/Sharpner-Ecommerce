@@ -8,9 +8,9 @@ const Header = (props) => {
   const cartCtx = useContext(cartContext);
   const authCtx = useContext(authContext);
   const { show } = props;
-  const totalItems = cartCtx.items.reduce((curr, item) => {
-    return curr + item.quantity;
-  }, 0);
+  const totalItems=cartCtx.items.reduce((curr,item)=>{
+    return curr+item.quantity;
+  },0);
   return (
     <header>
       <Navbar bg="dark" data-bs-theme="dark">

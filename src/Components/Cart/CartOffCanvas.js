@@ -1,29 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Offcanvas, Table } from "react-bootstrap";
-
-const cartElements = [
-  {
-    title: "Colors",
-    price: 100,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-    quantity: 2,
-  },
-  {
-    title: "Black and white ",
-    price: 50,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-    quantity: 3,
-  },
-  {
-    title: "Yellow and black ",
-    price: 70,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-    quantity: 1,
-  },
-];
+import cartContext from "../../Context/cart-context";
 
 const CartOffCanvas = (props) => {
   const { show, hide, showHandler } = props;
+  const cartCtx = useContext(cartContext);
 
   return (
     <>
@@ -51,12 +32,16 @@ const CartOffCanvas = (props) => {
               </tr>
             </thead>
 
-            <tbody>
-              {cartElements.map((item) => (
+            {cartCtx.items.map((item) => (
+              <tbody key={item.id}>
                 <tr>
                   <td>
                     <div>
-                      <img style={{ width: "50px" }} alt={item.title} src={item.imageUrl} />{" "}
+                      <img
+                        style={{ width: "50px" }}
+                        alt={item.title}
+                        src={item.imageUrl}
+                      />{" "}
                       {item.title}
                     </div>
                   </td>
@@ -68,8 +53,8 @@ const CartOffCanvas = (props) => {
                     <Button variant="primary">Danger</Button>{" "}
                   </td>
                 </tr>
-              ))}
-            </tbody>
+              </tbody>
+            ))}
           </Table>
           <div className="d-flex align-items-center justify-content-center">
             <Button variant="primary"> PURCHASE</Button>

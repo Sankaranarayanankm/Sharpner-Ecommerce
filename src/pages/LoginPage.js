@@ -60,7 +60,7 @@ const LoginPage = () => {
           }
           const resData = await response.json();
           setData(resData);
-          authCtx.login(resData.idToken);
+          authCtx.login(resData.idToken,resData.email);
           
           history.replace('/store');
         } catch (error) {

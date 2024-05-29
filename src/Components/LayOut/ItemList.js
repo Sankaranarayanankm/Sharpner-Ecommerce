@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Row } from "react-bootstrap";
 import Item from "./Item";
+import cartContext from "../../Context/cart-context";
 const productsArr = [
   {
     title: "Colors",
@@ -14,7 +15,7 @@ const productsArr = [
     id: 2,
     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
   },
-  {
+  {   
     title: "Yellow and Black Colors",
     price: 70,
     id: 3,
@@ -29,6 +30,7 @@ const productsArr = [
 ];
 
 const ItemList = () => {
+  const cartCtx=useContext(cartContext);
   const items = productsArr.map((item) => (
     <Item
       key={item.id}
